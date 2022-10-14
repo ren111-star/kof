@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4b7b712b-63d6-4cc9-890d-6e00ef8e5232" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/api/user/userProfile/AddProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/api/user/userProfile/GetUserProfilesListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/api/user/userProfile/RemoveProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/api/user/userProfile/UpdateProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/consumer/WebSocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/consumer/utils/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/domain/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/domain/UserProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/repo/UserInfoRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/repo/UserProfileRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/security/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/service/impl/user/profile/AddProfileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/service/impl/user/profile/DeleteProfileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/service/impl/user/profile/GetListProfileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/service/impl/user/profile/UpdateProfileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/service/user/profile/AddProfileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/service/user/profile/DeleteProfileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/service/user/profile/GetListProfileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/main/java/io/getarrays/userservice/service/user/profile/UpdateProfileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_backend/spring_security/backend/src/test/java/io/getarrays/userservice/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/1-13121H05009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/img7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/matching.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/player/kyo/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/player/kyo/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/player/kyo/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/player/kyo/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/player/kyo/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/player/kyo/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/player/kyo/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/script/ac_game_object/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/script/controller/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/script/game_map/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/script/player/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/script/player/kyo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/assets/script/utils/gif.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/components/ContentFiled.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/components/GameMap.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/components/MatchGround.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/components/NavBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/components/PlayGround.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/store/pk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/store/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/views/error/NotFound.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/views/pk/PkIndexView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/views/ranklist/RankListIndexView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/views/record/RecordIndexView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/views/user/account/UserAccountLoginView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/views/user/account/UserAccountRegisterView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kof_fontend/src/views/user/userInfo/UserInfoIndexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security" beforeDir="false" afterPath="$PROJECT_DIR$/kof_backend/spring_security" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/Spring Security.assets/image-20220907221335390.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/Spring Security.assets/image-20220908153016815.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/Spring Security.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/createDatabaseToMybatis.sql" beforeDir="false" afterPath="$PROJECT_DIR$/kof_backend/spring_security/createDatabaseToMybatis.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/jsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/components/ContentBase.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/components/NavBar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/store/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/views/HomeView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/src/views/LoginView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/font_end/vue.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/UserserviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/api/UserResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/domain/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/repo/RoleRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/repo/UserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/security/filter/CustomAuthorizationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/security/filter/CustomerAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/java/io/getarrays/userservice/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_jpa/src/test/java/io/getarrays/userservice/UserserviceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/UserserviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/api/UserResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/domain/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/repo/RoleRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/repo/UserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/security/filter/CustomAuthorizationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/security/filter/CustomerAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/java/io/getarrays/userservice/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/resources/mapper/RoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/main/resources/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_backend/spring_security/userservice_mybatis/src/test/java/io/getarrays/userservice/UserserviceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_fontend" beforeDir="false" afterPath="$PROJECT_DIR$/kof_fontend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_fontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/kof_fontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_fontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/kof_fontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_fontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/kof_fontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_fontend/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/kof_fontend/src/assets/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_fontend/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_fontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/kof_fontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kof_fontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/kof_fontend/vue.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FoEls5nOJp6jiITqgSuPotj2Ib" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b7b712b-63d6-4cc9-890d-6e00ef8e5232" name="Changes" comment="" />
+      <created>1665150192458</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665150192458</updated>
+      <workItem from="1665150196081" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
