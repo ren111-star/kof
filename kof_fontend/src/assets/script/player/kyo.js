@@ -1,19 +1,28 @@
 import { Player } from './base.js'
+import { useStore } from "vuex";
 import { GIF } from '../utils/gif.js'
 
 export class Kyo extends Player {
     constructor(root, info) {
         super(root, info);
-
+        this.store = useStore()
         this.init_animations();
     }
 
     init_animations () {
         let outer = this;
         let offsets = [0, -5, -5, -30, 0, 0, 0]
+        switch (this.play_used) {
+            case 'kyo':
+                offsets = [0, -5, -5, -30, 0, 0, 0]
+                break;
+            case 'bashen':
+                offsets = [0, 0, 0, -30, 0, 0, -30]
+        }
         for (let i = 0; i < 7; i ++ ) {
             let gif = GIF();
-            gif.load(require(`@/assets/images/player/kyo/${i}.gif`))
+            let player = outer.play_used
+            gif.load(require(`@/assets/images/player/${player}/${i}.gif`))
             this.animations.set(i, {
                 gif: gif,
                 frame_cnt: 0,

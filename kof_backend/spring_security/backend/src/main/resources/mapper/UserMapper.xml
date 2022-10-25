@@ -6,6 +6,7 @@
 
     <resultMap id="userAndRoles" type="io.getarrays.userservice.domain.User">
         <id property="id" column="uid" />
+        <result property="rating" column="rating" />
         <result property="name" column="uname" />
         <result property="password" column="password" />
         <result property="username" column="username" />
@@ -18,6 +19,7 @@
     <select id="findByUsername" resultMap="userAndRoles">
         select
             u.id as uid,
+            rating,
             u.name as uname,
             password,
             username,
@@ -32,8 +34,8 @@
     </select>
 
     <insert id="insertUser" useGeneratedKeys="true" keyProperty="id"  parameterType="io.getarrays.userservice.domain.User">
-        insert into kof.user (id, name, username, password)
-        values (null, #{name}, #{username}, #{password});
+        insert into kof.user (id, rating, name, username, password)
+        values (null, 1500, #{name}, #{username}, #{password});
     </insert>
 
     <insert id="addRoleToUserById">

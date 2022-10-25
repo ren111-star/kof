@@ -1,5 +1,5 @@
 <template>
-  <div id="kof" ref="parent" class="game-map">
+  <div id="kof" :style="conTop" ref="parent" class="game-map">
     <div class="kof-head">
       <div class="kof-head-hp-0">
         <div>
@@ -40,11 +40,14 @@ export default {
       )
     })
 
-
+    let conTop = {
+      backgroundImage: 'url(' + require(`/src/assets/images/background/${store.state.pk.backgroundImage}`) + ')',
+    }
 
     return {
       parent,
-      canvas
+      canvas,
+      conTop
     }
   }
 }
@@ -55,7 +58,6 @@ export default {
   width: 1280px;
   height: 820px;
 
-  background-image: url('/src/assets/images/0.gif');
   background-size: 200% 100%;
   background-position: top;
   position: absolute;

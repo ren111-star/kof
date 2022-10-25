@@ -21,6 +21,15 @@
           </div>
         </div>
       </div>
+      <div class="col-6 text-center mt-3">
+        <select class="form-select" v-model="select_player" aria-label="Default select example">
+          <option disabled>选择角色</option>
+          <option selected value="kyo">kyo</option>
+          <option value="bashen">bashen</option>
+          <option value="Three">Three</option>
+        </select>
+      </div>
+
       <div class="col-12 btn-group-lg btn-light" style="text-align: center; margin-top: 10vh">
         <button type="button" class="btn btn-dark" @click="click_match_btn">{{ match_btn_info }}</button>
       </div>
@@ -30,16 +39,18 @@
 
 <script>
 import {ref} from "vue";
-import { useStore } from "vuex";
+import {useStore} from "vuex";
 
 export default {
   name: "MatchGround",
-  setup () {
+  setup() {
     let match_btn_info = ref("matching")
     const store = useStore()
+    let select_player = ref('kyo')
 
     const click_match_btn = () => {
       if (match_btn_info.value === "matching") {
+        store.commit("updatePlayer", select_player.value)
         match_btn_info.value = "cancel"
         store.state.pk.socket.send(JSON.stringify({
           event: "start_matching"
@@ -54,7 +65,8 @@ export default {
 
     return {
       match_btn_info,
-      click_match_btn
+      click_match_btn,
+      select_player
     }
   }
 }

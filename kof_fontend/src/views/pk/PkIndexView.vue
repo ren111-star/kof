@@ -32,7 +32,7 @@ export default {
       socket.onopen = () => {
         console.log("connected")
       }
-
+      store.commit("updateResult", false)
       socket.onmessage = msg => {
         const data = JSON.parse(msg.data);
         if (data.event === "success_matching") {
@@ -59,13 +59,17 @@ export default {
           }
           console.log(data)
         } else if (data.event === "result") {
-          store.commit("updateLoser", data.loser)
-          store.commit("updateResult", true)
+          if (store.state.pk.status === "playing") {
+            store.commit("updateLoser", data.loser)
+            store.commit("updateResult", true)
+          }
         } else if (data.event === "if_exit") {
-          socket.send(JSON.stringify({
-            event: "if_exit",
-            id: store.state.user.id
-          }))
+          if (!store.state.pk.status.result) {
+            socket.send(JSON.stringify({
+              event: "if_exit",
+              id: store.state.user.id
+            }))
+          }
         }
       }
 

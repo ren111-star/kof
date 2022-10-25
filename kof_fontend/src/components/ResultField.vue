@@ -1,6 +1,6 @@
 <template>
   <div class="result">
-    <span>Winner{{ $store.state.pk.loser }}</span>
+    <span>Winner{{ $store.state.pk.loser==='A'?'B':'A'}}</span>
     <div>
       <button @click="restart">再来</button>
     </div>

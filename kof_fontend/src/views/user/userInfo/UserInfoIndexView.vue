@@ -6,8 +6,15 @@
           <div class="card-body">
             <img :src="$store.state.user.photo" alt="" style="width: 100%">
           </div>
-          <div class="card-body" style="font-size: 20px; color: white; text-align: center" >
+          <div class="card-body" style="font-size: 20px; color: white; text-align: center">
             {{ $store.state.user.username }}
+          </div>
+        </div>
+        <div class="card mt-3">
+          <div class="card-body">
+            <div>
+              <button @click="push_back" class="btn setBack">更换背景</button>
+            </div>
           </div>
         </div>
       </div>
@@ -89,7 +96,8 @@
                                             :data-bs-target="'#update_profile-' + profile.id"
                                             data-mdb-ripple-color="dark" style="margin-right: 10px">修改
                                     </button>
-                                    <div class="modal fade" :id="'update_profile-' + profile.id" data-bs-backdrop="static"
+                                    <div class="modal fade" :id="'update_profile-' + profile.id"
+                                         data-bs-backdrop="static"
                                          data-bs-keyboard="false" tabindex="-1"
                                          aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                       <div class="modal-dialog">
@@ -104,17 +112,20 @@
                                               <div class="form-group">
                                                 <label for="update_profile_title">标题</label>
                                                 <input type="text" v-model="profileAdd.title" class="form-control"
-                                                       id="update_profile_title" placeholder="标题" aria-describedby="emailHelp"
+                                                       id="update_profile_title" placeholder="标题"
+                                                       aria-describedby="emailHelp"
                                                 >
                                               </div>
                                               <div class="form-group">
                                                 <label for="update_profile_description">简介</label>
-                                                <textarea v-model="profileAdd.description" placeholder="简介" class="form-control"
+                                                <textarea v-model="profileAdd.description" placeholder="简介"
+                                                          class="form-control"
                                                           id="update_profile_description" rows="3"/>
                                               </div>
                                               <div class="form-group">
                                                 <label for="update_profile_content">内容</label>
-                                                <textarea v-model="profileAdd.content" placeholder="内容" class="form-control"
+                                                <textarea v-model="profileAdd.content" placeholder="内容"
+                                                          class="form-control"
                                                           id="update_profile_content" rows="8"/>
                                               </div>
                                             </form>
@@ -124,7 +135,8 @@
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                               取消
                                             </button>
-                                            <button type="button" class="btn btn-primary" @click="profile_update(profile)">提交
+                                            <button type="button" class="btn btn-primary"
+                                                    @click="profile_update(profile)">提交
                                             </button>
                                           </div>
                                         </div>
@@ -159,6 +171,7 @@ import {useStore} from "vuex";
 import $ from 'jquery'
 import {ref, reactive} from "vue";
 import {Modal} from 'bootstrap/dist/js/bootstrap'
+import router from "@/router";
 
 export default {
   name: "UserInfoIndexView",
@@ -175,6 +188,10 @@ export default {
       content: "",
       error_message: ""
     });
+
+    const push_back = () => {
+      router.push({name: 'background'})
+    }
 
     const refresh_profile = () => {
       $.ajax({
@@ -267,7 +284,8 @@ export default {
       profileAdd,
       profile_add,
       profile_remove,
-      profile_update
+      profile_update,
+      push_back
     }
 
   }
@@ -277,6 +295,15 @@ export default {
 <style scoped>
 hr {
   margin: 0;
+}
+
+.setBack {
+  width: 100%;
+  background-color: #070505;
+  border-radius: 5px;
+  color: #57b683;
+  font-weight: bold;
+  font-family: "Bauhaus 93", cursive;
 }
 
 table td,
@@ -301,5 +328,7 @@ table th {
 
 .card {
   background-image: url("@/assets/images/img7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

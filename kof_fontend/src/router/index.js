@@ -6,6 +6,7 @@ import RankListIndexView from "@/views/ranklist/RankListIndexView";
 import UserInfoIndexView from "@/views/user/userInfo/UserInfoIndexView";
 import UserAccountLoginView from "@/views/user/account/UserAccountLoginView";
 import UserAccountRegisterView from "@/views/user/account/UserAccountRegisterView";
+import BackgroundSetView from "@/views/set/BackgroundSetView";
 import store from '@/store/index'
 
 const routes = [
@@ -13,6 +14,13 @@ const routes = [
     path: '/',
     redirect: "/pk/",
     name: 'home',
+    meta: {
+      requestAuth: true
+    }
+  },{
+    path: '/background/',
+    name: 'background',
+    component: BackgroundSetView,
     meta: {
       requestAuth: true
     }

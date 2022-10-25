@@ -8,7 +8,8 @@ export default {
         photo: "",
         access_token: "",
         refresh_token: "",
-        is_login: false
+        is_login: false,
+        play_used: "kyo",
     },
     getters: {},
     mutations: {
@@ -17,6 +18,9 @@ export default {
             state.username = user.username;
             state.photo = user.photo;
             state.is_login = user.is_login
+        },
+        updatePlayer (state, player) {
+          state.play_used = player
         },
         updateToken(state, token) {
             state.access_token = token

@@ -8,12 +8,13 @@ export default {
         gamemap: "",
         loser: "",
         a_id: 0,
-        a_x: 0,
+        a_x: 30,
         a_y: 0,
         b_id: 0,
-        b_x: 0,
+        b_x: 230,
         b_y: 0,
         gameObject: null,
+        backgroundImage: '0.gif'
     },
     getters: {},
     mutations: {
@@ -26,12 +27,23 @@ export default {
         updateLoser(state, loser) {
             state.loser = loser
         },
+        updateBackgroundImage (state, image) {
+          state.backgroundImage = image
+        },
         updateOpponent (state, opponent) {
             state.opponent_username = opponent.username;
             state.opponent_photo = opponent.photo
         },
         updateStatus (state, status) {
             state.status = status
+        },
+        updatePositionA (state, position) {
+          state.a_y = position.a_y
+          state.a_x = position.a_x
+        },
+        updatePositionB (state, position) {
+          state.b_x = position.b_x
+          state.b_y = position.b_y
         },
         updateGame(state, game) {
             state.gamemap = game.game_map;

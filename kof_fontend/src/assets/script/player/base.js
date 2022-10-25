@@ -1,8 +1,6 @@
 import {AcGameObject} from '../ac_game_object/base.js';
 import $ from 'jquery'
 
-// import { Controller } from "@/assets/script/controller/base";
-
 export class Player extends AcGameObject {
     constructor(root, info) {
         super();
@@ -16,6 +14,9 @@ export class Player extends AcGameObject {
         this.color = info.color;
         this.store = root.store;
         this.result = "none";
+        this.rend_count = 0;
+
+        this.play_used = info.play_used;
 
         this.direction = 1;
 
@@ -48,7 +49,15 @@ export class Player extends AcGameObject {
         this.opponent_keys = new Set(JSON.parse(JSON.stringify([...new_keys])))
     }
 
+    print_count () {
+        let data = this
+        setInterval(function () {
+            console.log(data.rend_count)
+        }, 1000)
+    }
+
     start() {
+        this.print_count();
         console.log(typeof this.store.state.user.id, "<-----这是user id")
         console.log(typeof this.store.state.pk.a_id, "<-----这是aid")
         console.log(typeof this.store.state.pk.b_id, "<-----这是bid")
@@ -81,18 +90,6 @@ export class Player extends AcGameObject {
         this.lastSet = new Set(JSON.parse(JSON.stringify([...this.pressed_keys])))
 
         let w, a, d, space;
-
-        // if (this.id === 0) {
-        //     w = this.pressed_keys.has('w');
-        //     a = this.pressed_keys.has('a')
-        //     d = this.pressed_keys.has('d');
-        //     space = this.pressed_keys.has(' ')
-        // } else {
-        //     w = this.pressed_keys.has('ArrowUp')
-        //     a = this.pressed_keys.has('ArrowLeft')
-        //     d = this.pressed_keys.has('ArrowRight')
-        //     space = this.pressed_keys.has('Enter')
-        // }
 
         if (parseInt(this.store.state.user.id) === this.store.state.pk.a_id) {
             if (this.id === 0) {
@@ -167,9 +164,7 @@ export class Player extends AcGameObject {
             if (this.status === 3) this.status = 0
         }
 
-        // console.log(this.root.$canvas.width())
         if (this.x < 0) {
-            // console.log(this.x)
             this.x = 0;
         } else if (this.x + this.width > this.root.$canvas.width() / 4.25) {
             this.x = this.root.$canvas.width() / 4.25 - this.width
@@ -207,16 +202,31 @@ export class Player extends AcGameObject {
         }, 'quick')
         if (this.hp <= 0) {
             if (this.id === 1) {
-                this.store.commit("updateLoser", "A")
-            } else if (this.id === 0) {
                 this.store.commit("updateLoser", "B")
+            } else if (this.id === 0) {
+                this.store.commit("updateLoser", "A")
             }
-            console.log("发送游戏结束信息")
             // 发送游戏结束信息
-            this.store.state.pk.socket.send(JSON.stringify({
-                event: "result",
-                loser_id: this.store.state.user.id
-            }))
+            if (parseInt(this.store.state.user.id) === this.store.state.pk.a_id) {
+                console.log("我是", this.store.state.user.id)
+                if (this.id === 0) {
+                    console.log(`I am ${this.id}, and I am loser`)
+                    this.store.state.pk.socket.send(JSON.stringify({
+                        event: "result",
+                        loser_id: this.store.state.user.id
+                    }))
+                }
+            }
+            if (parseInt(this.store.state.user.id) === this.store.state.pk.b_id) {
+                console.log("我是", this.store.state.user.id)
+                if (this.id === 1) {
+                    console.log(`I am ${this.id}, and I am loser`)
+                    this.store.state.pk.socket.send(JSON.stringify({
+                        event: "result",
+                        loser_id: this.store.state.user.id
+                    }))
+                }
+            }
             this.hp = 0;
             this.frame_current_cnt = 0;
             this.status = 6;
@@ -269,7 +279,12 @@ export class Player extends AcGameObject {
         }
     }
 
+    testRate () {
+        this.rend_count ++;
+    }
+
     update() {
+        this.testRate();
         this.update_attack()
         this.update_direction();
         this.update_move();

@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>matchingsystem</module>
+        <module>backend</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -1,23 +1,21 @@
-import { AcGameObject } from '../ac_game_object/base.js';
+import {AcGameObject} from '../ac_game_object/base.js';
 import $ from 'jquery'
-import { Kyo} from "@/assets/script/player/kyo";
+import {Kyo} from "@/assets/script/player/kyo";
 import {Controller} from "@/assets/script/controller/base";
-import { useStore } from "vuex";
+import {useStore} from "vuex";
 
 export class GameMap extends AcGameObject {
     constructor(ctx, parent) {
         super();
         this.ctx = ctx;
         this.parent = parent;
-        this.$canvas =$('#canvas')
+        this.$canvas = $('#canvas')
         this.$canvas.focus()
         this.width = this.parent.clientWidth
         this.height = this.parent.clientHeight
         this.$timer = $('.kof-head-timer')
         this.controller = new Controller(this.$canvas)
         this.store = useStore()
-        console.log('store opponent', this.store.state.pk.opponent_username)
-        console.log('store gamemap', this.store.state.pk.gamemap)
         this.players = [
             new Kyo(this, {
                 id: 0,
@@ -25,7 +23,8 @@ export class GameMap extends AcGameObject {
                 y: 0,
                 width: 30,
                 height: 50,
-                color: 'red'
+                color: 'red',
+                play_used: this.store.state.user.play_used
             }),
             new Kyo(this, {
                 id: 1,
@@ -33,7 +32,8 @@ export class GameMap extends AcGameObject {
                 y: 0,
                 width: 30,
                 height: 50,
-                color: 'blue'
+                color: 'blue',
+                play_used: this.store.state.user.play_used
             })
         ]
         this.time_left = 60 * 1000;
@@ -43,6 +43,10 @@ export class GameMap extends AcGameObject {
     }
 
     update() {
+        this.render();
+    }
+
+    render() {
         this.time_left -= this.timedelta;
         if (this.time_left < 0) {
             this.time_left = 0;
@@ -63,11 +67,6 @@ export class GameMap extends AcGameObject {
             }
         }
         this.$timer.text(parseInt(this.time_left / 1000))
-
-        this.render();
-    }
-
-    render() {
         this.ctx.clearRect(0, 0, this.width, this.height);
     }
 }
